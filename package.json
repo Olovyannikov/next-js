@@ -2,21 +2,36 @@
   "name": "next-js",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "install": "gulp && next build",
+    "dev": "gulp && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "export": "next export",
+    "stylelint": "stylelint \"**/*.scss\" --fix"
   },
   "dependencies": {
+    "husky": "^7.0.4",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/node": "17.0.0",
-    "@types/react": "17.0.37",
-    "eslint": "8.4.1",
-    "eslint-config-next": "12.0.7",
-    "typescript": "4.5.4"
+    "@types/classnames": "^2.3.1",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "classnames": "^2.3.1",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "gulp": "latest",
+    "gulp-clean": "latest",
+    "gulp-svg-sprite": "latest",
+    "sass": "^1.45.0",
+    "stylelint": "latest",
+    "stylelint-config-standard-scss": "latest",
+    "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
+    "stylelint-order": "^5.0.0",
+    "typescript": "latest"
   }
 }
