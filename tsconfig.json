@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["src/*"],
-      "@/layout/*": ["src/client/app/layout/*"],
-      "@/components/*": ["src/client/app/components/*"],
-      "@/sprite/*": ["src/client/resources/img/sprite/*"],
-      "@/styles": ["src/client/resources/styles/style.scss"],
-      "@/resources/*": ["src/client/client/resources/"]
+      "@/styles": ["client/assets/styles/style.scss"],
+      "@/assets/*": ["client/assets/*"],
+      "@client/*": ["client/*"],
+      "@/components": ["client/app/components/index.ts"],
+      "@/public-app": ["client/app/public/PagesHolder/PagesHolder.tsx"],
+      "@/layouts/*": ["client/app/layouts/*"],
+      "@/utils": ["client/utils.ts"],
+      "@/connection": ["client/Connection.ts"],
+      "@/ui": ["client/app/components/UI/index.ts"],
+      "@store/*": ["client/store/*"]
     },
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -30,12 +30,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./src/**/*", "./src/client/resources/images.d.ts"],
+  "exclude": ["node_modules", "src/**/*.proto"]
 }

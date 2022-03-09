@@ -1,9 +1,5 @@
-import {withLayout} from "@/layout/Layout";
+import { Index } from '@/public-app';
 
-const Index = (): JSX.Element => {
-    return (
-        <></>
-    )
-}
+const IndexPage = (): JSX.Element => <Index/>;
 
-export default withLayout(Index);
+export default IndexPage;
